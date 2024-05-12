@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hi-tech Lab</title>
+    <link rel="icon" href="Picsart_24-03-02_17-26-46-983.png" type="image/icon">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+</head>
+<body>
+  <header class="header">
+    <div class="logo-container">
+        <a href="lab.html"><img src="logo.jpg" alt="Logo" class="logo" width="100"></a>
+    </div>
+    <div class="servicesdetails">
+      <h7>LAB</h7><br>
+      <h7>X-RAY</h7><br>
+      <h7>ECG</h7><br>
+      <h7>OPG</h7><br>
+    </div>
+    
+</header>
+<div class="navdiv">
+  <nav class="nav">
+    <div class="menu-overlay">
+      <ul class="menu">
+        <li class="nav-item"><a href="lab.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="#" id="openResultModal" class="nav-link">Results</a></li>
+        <li class="nav-item"><a href="adminpage.html" class="nav-link" id="admin-link">Admin</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+      </ul>
+    </div>
+    <div class="menu-btn">
+      <i class="fas fa-bars"></i>
+    </div>
+  </nav>
+</div>
+
+
+  
+<main>
+  <section class="booking-container">
+    <!-- <video autoplay muted loop class="background-video">
+      <source src="MED5.mp4" type="video/mp4">
+      <-- Add additional sources for different video formats if needed -->
+  <!-- </video> -->
+  <div>
+    <img src="Picsart_24-03-02_17-26-46-983.png" alt="logo" class="hitech">
+    <img src="noble.png" alt="Logo" class="noble">
+    <div class="line"></div>
+    <div class="doctors">
+    <h2 class="heading">Consultant Pathologist</h2>
+    <ul class="list-doctors">
+      <li class="doctor-info">Dr. SALEEM <h6>MD,DCP</h6></li>
+      <li class="doctor-info">Dr. SUHAIL SALEEM <h6>MD,DipRCpath(UK),FAADV</h6></li>
+  </ul>
+  
+  </div>
+</div>
+
+  
+  <img src="background.jpg" alt="" class="background-video">
+  <div class="paper">
+    <div class="formbold-main-wrapper">
+        <div class="message-container">
+            <div class="confirmation-message" id="confirmationMessage">
+                Appointment booked successfully!
+            </div>
+            <div class="error-message" id="errorMessage">
+                Please select a Wednesday.
+            </div>
+            <div class="error-message" id="pastDayMessage" style="display:none;">
+                Booking for today or past days are not possible.
+            </div>
+        </div>
+        <div class="formbold-form-wrapper">
+            <div class="booking">Normal Booking :</div>  
+            <form action="/normal-booking" method="POST" id="bookingForm" enctype="multipart/form-data">
+                <div class="formbold-mb-5">
+                    <label for="name" class="formbold-form-label">Full Name</label>
+                    <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Full Name"
+                    class="formbold-form-input"
+                    required
+                    />
+                </div>
+                <div class="formbold-mb-5">
+                    <label for="phone" class="formbold-form-label">Phone Number</label>
+                    <input
+                    type="text"
+                    name="phoneNumber"
+                    id="phoneNumber"
+                    placeholder="Enter your phone number"
+                    class="formbold-form-input"
+                    required
+                    />
+                </div>
+                <div class="formbold-mb-5">
+                    <label for="place" class="formbold-form-label">Place</label>
+                    <input
+                    type="text"
+                    name="place"
+                    id="place"
+                    placeholder="Enter your place"
+                    class="formbold-form-input"
+                    required
+                    />
+                </div>
+                <div class="flex flex-wrap formbold--mx-3">
+                    <div class="w-full sm:w-half formbold-px-3">
+                        <div class="formbold-mb-5 w-full">
+                            <label for="date" class="formbold-form-label">Date <h6>(wednessday)</h6></label>
+                            <input
+                            type="date"
+                            name="date"
+                            id="date"
+                            class="formbold-form-input"
+                            required
+                            />
+                        </div>
+                    </div>
+                </div>
+                <div class="formbold-mb-5">
+                    <label for="resultPdf" class="formbold-form-label">Upload Result PDF</label>
+                    <input type="file" name="resultPdf" id="resultPdf" accept=".pdf" required>
+                </div>
+                <div>
+                    <button type="submit" class="formbold-btn">Book Appointment</button>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+
+</section>
+</main>
+
+<section class="articles">
+  <article>
+    <div class="article-wrapper">
+      <figure>
+        <img src="lab.jpg" alt="" />
+      </figure>
+      <div class="article-body">
+        <h2>LAB</h2>
+        <a href="#" class="read-more">
+           pricing details <span class="sr-only">about this is some title</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </article>
+  <article>
+    <div class="article-wrapper">
+      <figure>
+        <img src="xray.jpg" alt="" />
+      </figure>
+      <div class="article-body">
+        <h2>XRAY</h2>
+        <a href="#" class="read-more">
+          pricing details <span class="sr-only">about this is some title</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </article>
+  <article>
+    <div class="article-wrapper">
+      <figure>
+        <img src="ecg.jpg" alt="" />
+      </figure>
+      <div class="article-body">
+        <h2>ECG</h2>
+        <a href="#" class="read-more">
+          pricing details <span class="sr-only">about this is some title</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </article>
+  <article>
+    <div class="article-wrapper">
+      <figure>
+        <img src="opg.jpg" alt="" />
+      </figure>
+      <div class="article-body">
+        <h2>OPG</h2>
+        <a href="#" class="read-more">
+          pricing details <span class="sr-only">about this is some title</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </article>
+  
+</section>
+<section class="sample-collection-sec">
+  <div class="sample-collection">
+    <div class="sample-collection-card" onclick="toggleCardHover(this)">
+      <div class="sample-icon"><i class="fas fa-vial"></i></div>
+      <p>HOME SAMPLE COLLECTION WITHIN 8 KILOMETERS</p>
+    </div>
+    <div class="sample-collection-card" onclick="toggleCardHover(this)">
+      <div class="sample-icon"><i class="fa-solid fa-shield" ></i></div>
+      <p>FAST & SAFE SERVICE</p>
+    </div>
+    <a href="tel:04985-205779" class="sample-collection-card">
+      <div class="sample-icon"><i class="fas fa-phone"></i></div>
+      <p>CONTACT US<br>04985-205779</p>
+  </a>
+  </div>
+</section>
+
+<section class="carousel-container">
+  <h1>ADVANCED MACHINES</h1>
+  <main id="carousel" class="carousel">
+    <div class="carousel-item" style="background-image: url('cr.jpg');">
+      <div class="carousel-item-content">
+          <h2>FUJIFILM CR SYSTEM</h2>
+           
+      </div>
+    </div>
+    <div class="carousel-item" style="background-image: url('fujifilm.jpg');">
+      <div class="carousel-item-content">
+          <h2>FUJIFILM DRI CHEM NX500</h2>
+           
+      </div>
+    </div>
+    <div class="carousel-item" style="background-image: url('mispa.jpg');">
+      <div class="carousel-item-content">
+          <h2>MISPA-i2</h2>
+           
+      </div>
+    </div>
+    <div class="carousel-item" style="background-image: url('microlab.jpg');">
+      <div class="carousel-item-content">
+          <h2>MICROLAB 300</h2>
+           
+      </div>
+    </div>
+    <div class="carousel-item" style="background-image: url('vartech.jpg');">
+      <div class="carousel-item-content">
+          <h2>VATECH PAX</h2>
+           
+      </div>
+    </div>
+    <div class="carousel-item" style="background-image: url('mispanano\ \(1\).jpg');">
+      <div class="carousel-item-content">
+          <h2>TMS30i</h2>
+           
+      </div>
+    </div>
+    <div class="carousel-item" style="background-image: url('rochec111.jpg');">
+      <div class="carousel-item-content">
+          <h2>ROCHE COBAS C111</h2>
+           
+      </div>
+    </div>
+    <div class="carousel-item" style="background-image: url('rochee411.jpg');">
+      <div class="carousel-item-content">
+          <h2>ROCHE COBAS E411</h2>
+           
+      </div>
+    </div>
+    <div class="carousel-item" style="background-image: url('mindrey.jpg');">
+      <div class="carousel-item-content">
+          <h2>MINDRAY CL-900</h2>
+           
+      </div>
+    </div>
+    <div class="carousel-item" style="background-image: url('proxs.jpg');">
+      <div class="carousel-item-content">
+          <h2>SELECTRA PRO XS</h2>
+           
+      </div>
+    </div>
+    <div class="carousel-item" style="background-image: url('erba.jpg');">
+      <div class="carousel-item-content">
+          <h2>ERBA H-360</h2>
+           
+      </div>
+    </div>
+    <div class="carousel-item" style="background-image: url('gh900.jpg');">
+      <div class="carousel-item-content">
+          <h2>LIFETRONIC GH-900 PLUS</h2>
+           
+      </div>
+    </div>
+    <div class="carousel-item" style="background-image: url('ichroma.jpg');">
+      <div class="carousel-item-content">
+          <h2>BODITECH iCHROMA II</h2>
+           
+      </div>
+    </div>
+    <div class="carousel-item" style="background-image: url('ecl105.jpg ');">
+      <div class="carousel-item-content">
+          <h2>EBRA ECL 105</h2>
+           
+      </div>
+    </div>
+    <div class="carousel-item" style="background-image: url('aqua.jpg');">
+      <div class="carousel-item-content">
+          <h2>ST-200 AQUA</h2>
+           
+      </div>
+    </div>
+    <div class="carousel-item" style="background-image: url('vidas.jpg');">
+      <div class="carousel-item-content">
+          <h2>BIOMERIEUX MINI VIDAS</h2>
+           
+      </div>
+    </div>
+    <div class="carousel-item" style="background-image: url('mispanano.jpg');">
+      <div class="carousel-item-content">
+          <h2>AGAPPE MISPA NANO PLUS</h2>
+           
+      </div>
+    </div>
+    <div class="carousel-item" style="background-image: url('xrf.jpg');">
+      <div class="carousel-item-content">
+          <h2>PROTEUS XR/F</h2>
+           
+      </div>
+    </div>
+  </main>
+
+  <div class="arrow left"><i class="fas fa-arrow-left"></i></div>
+  <div class="arrow right"><i class="fas fa-arrow-right"></i></div>
+</section>
+
+
+<section class="rating-sec">
+  <h1>SINCE 1990</h1>
+  <section class="customer-section" id="customer-section">
+    <div class="rating">
+      <i class="fas fa-user-doctor" id="doctor-icon"></i>
+      <i class="fas fa-star" id="star-icon"></i>
+      <i class="fas fa-star" id="star-icon"></i>
+      <i class="fas fa-star" id="star-icon"></i>
+      <i class="fas fa-star" id="star-icon"></i>
+      <i class="fas fa-star" id="star-icon"></i>
+    </div>
+      <div class="counter">
+          <h2><span id="years-counter">0</span>+ Years<br/><br><span id="customers-counter">0</span>+ Happy Customers</h2>
+      </div>
+</section>
+</section>
+
+
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="footerlogo">
+        <a href="lab.html"><img src="Picsart_24-03-02_17-26-46-983.png" alt="" class="img-fluid logo-footer"></a>
+        <div class="footer-about">
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,  </p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="useful-link">
+          <h2>Useful Links</h2>
+          <img src="" alt="" class="img-fluid">
+          <div class="use-links">
+            <li><a href="lab.html"><i class="fa-solid fa-angles-right"></i> Home</a></li>
+            <li><a href="about.html"><i class="fa-solid fa-angles-right"></i> About Us</a></li>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="social-links">
+          <h2>Follow Us</h2>
+          <!-- Replace src attribute with appropriate Font Awesome classes -->
+          <img src="" alt="">
+          <div class="social-icons">
+            <!-- Font Awesome icon classes for Facebook and Instagram -->
+            <li><a href=""><i class="fab fa-facebook-f"></i> Facebook</a></li><br>
+            <li><a href=""><i class="fab fa-instagram"></i> Instagram</a></li>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="address">
+          <h2>Address</h2>
+          <img src="" alt="" class="img-fluid">
+          <div class="address-links">
+            <li class="address1"><i class="fa-solid fa-location-dot"></i> payyannur-
+              Kannur Dt 
+               Kerala 670308</li>
+            <li><a href=""><i class="fa-solid fa-phone"></i> +91 90904500112</a></li>
+            <li><a href=""><i class="fa-solid fa-envelope"></i> mail@gmail.com</a></li>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+<!-- footer section end -->
+<!-- footer copy right section start -->
+<section id="copy-right">
+  <div class="copy-right-sec"> 
+    <p><i class="far fa-copyright"></i>    An <a href="https://orinoco.netlify.app/">Orinoco</a> product</p>
+
+</section>
+<!-- footer copy right section end -->
+<!-- Modal -->
+<div id="resultModal" class="modal">
+    <div class="modal-content">
+        <span class="close1">&times;</span>
+        <iframe id="resultFrame" src="/patient-results" frameborder="0"></iframe>
+    </div>
+</div>
+
+<script src="script1.js"></script>
+</body>
+</html>

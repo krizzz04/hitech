@@ -1,0 +1,270 @@
+
+.map {
+    width: 100%;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+
+.smart-device {
+    margin-left: auto;
+    margin-right: auto;
+    margin-left: 10%;
+    border-color: #444;
+    background-color: #333;
+    width: 295px;
+    height: 580px;
+    border-radius: 40px;
+    border: 2px solid #ddd;
+    padding: 60px 10px;
+    position: absolute;
+}
+
+.device-detail {
+    position: absolute;
+    left: 0;
+    top: 17px;
+    width: 100%;
+}
+
+.device-sensor {
+    background: #000000;
+    height: 7px;
+    width: 7px;
+    margin: 12px 100px;
+    border-radius: 100px;
+    display: block;
+}
+
+.device-microphone {
+    background: #111;
+    height: 7px;
+    width: 90px;
+    margin: -19px auto 0;
+    border-radius: 100px;
+}
+
+.screen {
+    height: 100%;
+    width: 100%;
+    background-image: url('map.jpeg');
+    background-position: center;
+    background-size:125%;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1) inset;
+    overflow: hidden;
+    position: relative;
+}
+
+.action-button {
+    height: 40px;
+    width: 40px;
+    background: #111;
+    margin: 10px auto;
+    border-radius: 100px;
+}
+
+.device-header {
+    background: #555;
+    box-shadow: 1px 2px 7px #333;
+}
+
+.menu-about {
+    position: relative;
+    height: 40px;
+}
+
+.menu-about-icon {
+    bottom: 10px;
+    right: 10px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 22px;
+    margin-left: 10px;
+    padding-top: 3px;
+}
+.map-link{
+    height: 421px;
+    width: 100%;
+}
+#menu-icon{
+    width: fit-content;
+    cursor: pointer;
+}
+.menu-about ul {
+	list-style: none;
+    display: none;
+	padding: 0px;
+}
+
+.menu-about ul li {
+
+	background: #555;
+}
+
+
+.menu-about ul li p {
+	padding: 29.8px;
+	color: #fff;
+	text-decoration: none;
+  font-weight: 700;
+  margin: 0px;
+}
+
+
+
+.hours{
+    position: absolute;
+    width: fit-content;
+    height: 300px;
+    display: flex;
+    right: 15%;
+  }
+  
+  .business-card {
+    width: 600px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .business-header {
+    background-color: #a9e0d479;
+    height: 70px;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.business-header h2 {
+    font-size: 30px;
+    color: white;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.658);
+    margin: 0; /* Remove default margin */
+}
+
+  
+.business-content {
+    display: flex;
+}
+
+.text-business {
+    width: fit-content;
+    margin: 0 auto; /* Horizontally center the text-business div */
+}
+
+.left-column,
+.right-column {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.business-day {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.business-time {
+    margin-top: 5px;
+}
+
+@media screen and (max-width: 1200px){
+    html{
+        overflow-x: hidden;
+      }
+      body{
+        overflow-x: hidden;
+        width: 100%;
+    }
+    
+    .map {
+        height: 850px;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Horizontally center contents */
+    }
+    
+    .hours {
+        height: 300px;
+        margin-top: 360px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        right: 0%;
+        width: 100%;
+    }
+    
+    .business-card {
+        width: 350px;
+        max-width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    
+    .smart-device {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+        margin-left: 0px;
+        border-color: #444;
+        background-color: #333;
+        width: 250px;
+        height: 505px;
+        border-radius: 40px;
+        border: 2px solid #ddd;
+        padding: 60px 10px;
+        position: absolute;
+    }
+    .menu-about ul li p {
+        padding: 18.8px;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 700;
+        margin: 0px;
+    }
+} 
+@media screen and (max-width: 247px){
+    html{
+        overflow-x: hidden;
+      }
+      body{
+        overflow-x: hidden;
+        width: 100%;
+    }
+    
+    .business-content {
+        display: flex;
+        flex-direction: column;
+    }
+    .hours {
+        height: 300px;
+        margin-top: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        right: 0%;
+        width: 100%;
+    }
+    .map {
+        height: 1000px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .left-column, .right-column {
+        flex: 1;
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+    }
+}

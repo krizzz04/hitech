@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointments</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Appointments</h1>
+
+        <!-- Date input field and filter button -->
+        <div>
+            <label for="appointmentDate">Select Date:</label>
+            <input type="date" id="appointmentDate">
+            <button onclick="filterAppointments()">Filter</button>
+        </div>
+
+        <table id="appointmentsTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Place</th>
+                    <th>Phone Number</th>
+                    <th>Date</th>
+                    <th>Patient ID</th>
+                    <th>Amount</th> <!-- New column for amount -->
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="appointmentsBody">
+                <!-- Appointments will be dynamically added here -->
+                <% appointments.forEach(function(appointment) { %>
+                    <tr>
+                        <td><%= appointment.name %></td>
+                        <td><%= appointment.place %></td>
+                        <td><%= appointment.phoneNumber %></td>
+                        <td><%= appointment.date.toDateString() %></td>
+                        <td><%= appointment.patientId %></td>
+                        <td><%= appointment.amount %></td> <!-- Display amount -->
+                        <td><button onclick="deleteAppointment('<%= appointment._id %>')">Delete</button></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+        
+        <a href="/result" class="btn">Manage Results</a>
+    </div>
+
+    <script>
+        function filterAppointments() {
+            const selectedDate = new Date(document.getElementById('appointmentDate').value);
+            const rows = document.querySelectorAll('#appointmentsTable tbody tr');
+
+            rows.forEach(row => {
+                const rowDate = new Date(row.cells[3].innerText); // Assuming date is in the 4th cell
+                if (rowDate.toDateString() === selectedDate.toDateString()) {
+                    row.style.display = ''; // Show the row if the date matches
+                } else {
+                    row.style.display = 'none'; // Hide the row if the date doesn't match
+                }
+            });
+        }
+
+        function deleteAppointment(appointmentId) {
+    fetch(`/appointments/${appointmentId}`, {
+        method: 'DELETE'
+    })
+    .then(response => {
+        if (response.ok) {
+            // If deletion was successful, reload the page to reflect the changes
+            window.location.reload();
+        } else {
+            console.error('Failed to delete appointment');
+        }
+    })
+    .catch(error => {
+        console.error('Error deleting appointment:', error);
+    });
+}
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,911 @@
+header {
+    position: relative;
+    background-color: #ffffff;
+    color: #333;
+    padding: 20px; /* Increased padding for header */
+    font-size: 20px; /* Increased font size for header */
+    height: 100px;
+  }
+  .header::after {
+    content: '';
+    position: absolute;
+    top: 8px;
+    bottom: 8px;
+    left: 190px; /* Adjust this value to position the line */
+    border-left: 3px solid #333; /* Adjust the width and color as needed */
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px; /* Increased padding for header */
+    background-color: #ffffff;
+    color: #333;
+    font-size: 20px;
+  }
+  .logo-container {
+    position: relative;
+  }
+  
+  /* Logo styling */
+  .logo {
+    width: 150px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5px;
+  }
+  .servicesdetails{
+    position: absolute;
+    padding-right: 20px;
+    font-weight: bold;
+    padding-left: 180px;
+    color: rgb(0, 0, 185);
+    font-size: 16px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  .nav {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .nav li {
+    margin-right: 20px;
+  }
+  
+  .nav a {
+    text-decoration: none;
+    color: #333;
+  }
+  .nav {
+    display: flex;
+    justify-content: center; /* Center the nav links horizontally */
+    align-items: center;
+  }
+  
+  /* Navigation list styling */
+  .nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Display as a row by default */
+  }
+  .navdiv {
+     position: sticky; /* Make the navbar sticky */
+    top: 0; /* Stick the navbar to the top of the viewport */
+    background-color: rgb(0, 0, 185); /* Background color for the navbar */
+    padding: 15px 20px; /* Padding for the navbar */
+    z-index: 1;
+  }
+  
+  /* Styling for navigation links */
+  .nav li {
+    margin-right: 20px; /* Add right margin for spacing */
+    transition: margin-right 0.3s ease; /* Add transition for smooth animation */
+  }
+  
+  /* Styling for navigation links */
+  .nav li {
+    margin-right: 20px; /* Add right margin for spacing */
+    transition: margin-right 0.3s ease; /* Add transition for smooth animation */
+  }
+  
+  .nav li a {
+    text-decoration: none;
+    color: white; /* Set text color to white */
+    padding: 10px 20px; /* Adjust padding */
+    border-top-left-radius: 5px; /* Rounded corners */
+    border-top-right-radius: 5px;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition effect */
+  }
+  
+  /* Hover effect */
+  .nav li a:hover {
+    background-color: #b3d9ff; /* Light blue background color on hover */
+    color: #fff; /* Change text color to white on hover */
+    padding-bottom: 16px;
+  }
+  
+  /* Active link styling */
+  .nav li.active a {
+    background-color: #ffffff; /* Light blue background color for active link */
+    color: #333; /* Change text color for active link */
+    padding-bottom: 16px;
+    margin-bottom: -6px; /* Adjust margin to compensate for padding change */
+  }
+ .center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px; /* Or specify a specific height */
+  }
+
+  .upload-admin {
+    display: flex;
+    flex-direction: column; /* Arrange elements vertically */
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+    height: 300px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 400px; /* Adjust as needed */
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .upload-admin input[type="tel"] {
+    font-size: large;
+    color: rgb(0, 0, 185);
+    padding-left: 40px; /* Adjust according to your icon size */
+    background-image: url('phone_icon.png'); /* Replace 'phone_icon.png' with the path to your icon */
+    background-repeat: no-repeat;
+    background-position: 10px center; /* Adjust the position of the icon */
+    border-radius: 10px;
+  }
+  
+  .upload-admin input[type="tel"],
+  .upload-admin input[type="file"],
+  .upload-admin button {
+    margin: 10px 0; /* Add spacing between elements */
+    padding: 10px; /* Add padding for better appearance */
+    width: 100%; /* Make elements fill the container */
+    text-align: center;
+  }
+  
+  .upload-admin input[type="file"],
+  .upload-admin button {
+    cursor: pointer; /* Change cursor to pointer for better usability */
+  }
+  
+  /* Style for the label associated with the file upload input */
+  .upload-admin label {
+    cursor: pointer; /* Change cursor to pointer for better usability */
+  }
+  
+  /* Style for the upload button */
+  .upload-admin button {
+    background-color: rgb(0, 0, 185); /* Green */
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    height: 40px; /* Increase height */
+  }
+  
+  .upload-admin button:hover {
+    background-color:  rgb(81, 81, 236); /* Darker shade of green */
+    cursor: pointer;
+  }
+  
+
+  
+  .input-container {
+    position: relative;
+    display: inline-block;
+    width: 90%;
+    border-radius: 10px;
+  }
+  
+  .input-container i {
+    position: absolute;
+    left: 10px; /* Adjust according to your design */
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  
+  
+  /* Style for the toggle switch */
+  .toggle-container {
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    height: 34px;
+    margin-top: 0; /* Add spacing between toggle and amount input */
+  }
+  
+  .toggle-container input[type="checkbox"] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .toggle-container label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 34px;
+    background-color: #4CAF50; /* Green when toggle is off */
+    border-radius: 17px; /* Half of the height for a rounded appearance */
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .toggle-container label:before {
+    content: 'Paid';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 12px;
+  }
+  
+  .toggle-container input[type="checkbox"]:checked + label {
+    background-color: #FF5733; /* Red when toggle is on */
+  }
+  
+  .toggle-container input[type="checkbox"]:checked + label:before {
+    content: 'Unpaid';
+  }
+  
+  #amount-input {
+    margin-top: 25px; /* Add spacing between amount input and button */
+  }
+  
+  #amount-input input[type="text"] {
+    padding: 10px; /* Add padding for better appearance */
+    width: 100%; /* Make the input fill the container */
+    box-sizing: border-box; /* Include padding and border in the width */
+    font-size: 16px; /* Adjust font size */
+  }
+  
+  #amount-input span {
+    font-size: 18px; /* Adjust font size of rupee symbol */
+    padding: 10px; /* Add padding for better appearance */
+  }
+  
+  
+  
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px; /* Adjust as needed */
+  }
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-size: 14px;
+    background: #fff;
+    max-width: 1920px;
+    margin: 0 auto;
+    overflow-x: hidden;
+    font-family: Poppins, sans-serif;
+  }
+  
+  #footer {
+    background: #f7f7f7 url(https://arena.km.ua/wp-content/uploads/3538533.jpg) center/cover;
+    padding: 7rem 3rem 8rem;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .logo-footer {
+    max-width: 300px;
+    margin-bottom: 2rem;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px; /* Adjust as needed */
+  }
+  
+  .social-links,
+  .useful-link,
+  .address {
+    flex: 1;
+    margin: 10px; /* Adjust spacing between elements */
+    width: fit-content;
+  }
+  
+  .social-links h2,
+  .useful-link h2,
+  .address h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #82074a;
+  }
+  
+  .social-icons,
+  .use-links,
+  .address-links {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .social-icons a,
+  .use-links a,
+  .address-links a {
+    color: #777777;
+    text-decoration: none;
+  }
+  
+  .social-icons a:hover,
+  .use-links a:hover,
+  .address-links a:hover {
+    color: #000;
+  }
+  
+  .social-icons a i {
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    color: #82074a;
+    font-size: 16px;
+    margin-right: 24px; /* Increased margin-right for more space */
+  }
+  .booking-container {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+    height: 700px;
+    margin: 10px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hitech{
+    position: absolute;
+    width: 150px;
+    top: 77%;
+    left: 15%;
+  }
+  .noble {
+    position: absolute;
+    top: 62%;
+    left: 15%;
+    width: 130px;
+  }
+  
+  .line {
+    position:absolute;
+    top: 58%; /* Adjust the top position based on the image top position */
+    left: 32%; /* Adjust the left position based on the image left position */
+    width: 3px; /* Adjust the width of the line */
+    height: 200px; /* Adjust the height of the line */
+    background-color: black; /* Set the color of the line */
+    transform: translateX(-50%); /* Center the line horizontally */
+    border-radius: 100px;
+  }
+  
+  .doctors{
+    position: absolute;
+    top: 74%; /* Adjust the top position based on the line's top position */
+    left: 48%; /* Adjust the left position based on the line's left position */
+    transform: translate(-50%, -50%);
+  }
+  .doctors ul{
+      list-style-type: none; /* Remove bullet points */
+      padding: 0; /* Remove default padding */
+  }
+  .doctors li{
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .doctors h2{
+    padding-left: 60px;
+    text-decoration: underline;
+  }
+  .list-doctors {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+  }
+  
+  .doctor-info {
+    margin: 10px 0;
+  }
+  
+  .doctor-info h6 {
+    display: inline; /* Display h6 inline */
+    margin-left: 5px; /* Add space between doctor's name and degree */
+  }
+  
+  
+  
+  
+  .background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Ensure the video is behind other content */
+  }
+  
+  .paper {
+    background-color: #35313178; /* Adjust alpha value for transparency */
+    backdrop-filter: blur(1px); /* Adjust blur radius as needed */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+    width: 460px;
+    align-items: center;
+  }
+  .booking{
+    font-size: 35px;
+    font-weight: bolder;
+    width: 500px;
+    margin-bottom: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: left;
+    color: white;
+  }
+  
+  formbold-form-wrapper {
+    margin-left: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+  }
+  
+  .formbold-mb-5 {
+    margin-bottom: 20px;
+  }
+  .formbold-pt-3 {
+    padding-top: 12px;
+  }
+  .formbold-main-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 90px;
+    padding-right: 0px;
+    padding-top: 30px;
+    align-self: center;
+    padding-left: 0px;
+    width: 85%;
+    margin: 5px;
+    margin-left: 10px;
+    padding-bottom: 0;
+  }
+  
+  .formbold-form-wrapper {
+    margin: 0 auto;
+    max-width: 550px;
+    width: 100%;
+    background: transparent;
+  }
+  .formbold-form-label {
+    display: block;
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+    margin-bottom: 12px;
+  }
+  .formbold-form-label h6{
+    display: inline;
+    font-size: 16px;
+  }
+  .formbold-form-label-2 {
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .formbold-form-input {
+    width: 110%;
+    padding: 12px 24px;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+    background-color: rgba(255, 255, 255, 0.2); /* Adjust alpha value for transparency */
+    backdrop-filter: blur(10px); /* Adjust blur radius as needed */
+    font-weight: 500;
+    font-size: 18px;
+    color: rgb(235, 234, 234);
+    outline: none;
+    resize: none;
+  }
+  .formbold-form-input::placeholder{
+    color: rgb(235, 234, 234);
+  }
+  .formbold-form-input:focus {
+    border-color: #ff0000;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .button-wrapper {
+    position: relative; /* Make the wrapper relatively positioned */
+    text-align: center;
+    margin-top: 20px; /* Adjust as needed */
+  }
+  
+  .formbold-btn {
+    padding: 14px 25px;
+    background-color: rgb(255, 0, 0);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    position: absolute; /* Position the button absolutely */
+    bottom: 20px; /* Adjust to position the button at the middle of the division */
+    left: 50%; /* Move the button to the middle horizontally */
+    transform: translateX(-50%); /* Adjust to center the button */
+    width: 60%; /* Limit the width of the button */
+  }
+  .formbold-btn:hover{
+    background-color: rgb(197, 0, 0);
+  }
+  
+  .formbold-btn:hover {
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .formbold--mx-3 {
+    margin-left: -12px;
+    margin-right: -12px;
+  }
+  .formbold-px-3 {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .confirmation-message {
+    background-color: #d4edda; /* Green color */
+    border: 1px solid #c3e6cb; /* Green border */
+    color: #155724; /* Dark green text */
+    position: absolute;
+    display: none;
+    padding: 10px;
+    width: 94%;
+    bottom: 564px; /* Adjust to position the error message above the button */
+    left: 50%; /* Align with the center */
+    transform: translateX(-50%); /* Center horizontally */
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  
+  .error-message {
+    background-color: #f8d7da; /* Red color */
+    border: 1px solid #f5c6cb; /* Red border */
+    color: #721c24; /* Dark red text */
+    position: absolute;
+    display: none;
+    padding: 10px;
+    width: 94%;
+    bottom: 564px; /* Adjust to position the error message above the button */
+    left: 50%; /* Align with the center */
+    transform: translateX(-50%); /* Center horizontally */
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  
+  
+  .paper {
+    position: relative;
+  }
+  
+  .message-container {
+    position: absolute;
+    bottom: -50px; /* Adjust as needed */
+    left: 0;
+    width: 100%;
+  }
+  
+  .paper h3 {
+    font-size: 20px;
+    text-align: left; /* Align text to the left */
+    margin-bottom: 10px; /* Add some spacing between h3 elements */
+    width: 180px;
+  }
+  
+  /* Align form inputs and button at center */
+  .form-group {
+    text-align: center;
+  }
+  
+  .submit-button {
+    margin-top: 30px;
+    background-color: #007bff; /* Background color */
+    color: #fff; /* Text color */
+    padding: 10px 20px; /* Padding */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Add cursor pointer on hover */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+  }
+  
+  .submit-button:hover {
+    background-color: #0056b3; /* Darker background color on hover */
+  }
+  .menu-btn{
+    display: none;
+  }
+  .copy-right-sec {
+    background: #2806b1;
+    color: #fff;
+    text-align: center;
+    padding: 1px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  
+  .copy-right-sec a {
+    color: #ff0000;
+  }
+  .copy-right-sec a:hover{
+    color: red;
+  }
+  a {
+    text-decoration: none;
+  }
+  @media screen and (max-width: 780px) {
+    html{
+      overflow-x: hidden;
+    }
+    body{
+      overflow-x: hidden;
+      width: 100%;
+  }
+  .menu-btn {
+    position: absolute;
+    font-size: 20px;
+    color: white;
+    padding-top: 15px;
+    right: 15px;
+    top: 0px;
+    display: flex;
+  }
+  .navdiv {
+    position: sticky;
+    top: 0;
+    background-color: rgb(0, 0, 185);
+    padding: 25px;
+    z-index: 1;
+    height: fit-content;
+  }
+  .nav li {
+    margin-right: 2px;
+    margin-bottom: 20px;
+  }
+  
+  .nav ul {
+    flex-direction: column;
+    margin-top: 30px;
+  }
+  
+  .menu-overlay {
+    display: none; /* Initially hide the menu overlay */
+  }
+  
+  .nav li a:hover {
+    background-color: transparent;
+  }
+  
+  .nav li.active a {
+    background-color: transparent;
+    color: white;
+  }
+  
+header {
+  position: relative;
+  background-color: #ffffff;
+  color: #333;
+  padding: 10px; /* Increased padding for header */
+  font-size: 20px; /* Increased font size for header */
+  height: 80px;
+}
+.header::after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  left: 150px; /* Adjust this value to position the line */
+  border-left: 3px solid #333; /* Adjust the width and color as needed */
+}
+
+.servicesdetails{
+  position: absolute;
+  padding-right: 20px;
+  font-weight: bold;
+  padding-left: 140px;
+  color: rgb(0, 0, 185);
+  font-size: 10px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.logo-container {
+  position: relative;
+}
+
+/* Logo styling */
+.logo {
+  width: 120px;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0px;
+}
+  .booking-container {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+    height: 850px;
+    margin: 10px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hitech{
+    position: absolute;
+    width: 150px;
+    top: 7%;
+    transform: translate(-50%, -50%);
+    left: 23%;
+  }
+  .noble {
+    position: absolute;
+    top: 16%;
+    left: 22%;
+    transform: translate(-50%, -50%);
+    width: 130px;
+  }
+  
+  .line {
+    position:absolute;
+    top: 5px; /* Adjust the top position based on the image top position */
+    left: 50%; /* Adjust the left position based on the image left position */
+    width: 3px; /* Adjust the width of the line */
+    height: 180px; /* Adjust the height of the line */
+    background-color: black; /* Set the color of the line */
+    transform: translateX(-50%); /* Center the line horizontally */
+    border-radius: 100px;
+  }
+  
+  .doctors{
+    position: absolute;
+    top: 95px; /* Adjust the top position based on the line's top position */
+    left: 75%; /* Adjust the left position based on the line's left position */
+    background-color: rgba(255, 255, 255, 0.356); /* Adjust alpha value for transparency */
+    backdrop-filter: blur(2px);
+    border-radius: 20px;
+  }
+  .doctors ul{
+      list-style-type: none; /* Remove bullet points */
+      padding: 0; /* Remove default padding */
+      
+  }
+  .doctors li{
+    font-size: 15px;
+    font-weight: 600;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  .doctors h2{
+    padding-left: 10px;
+    text-decoration: underline;
+    font-size: medium;
+  }
+  .list-doctors {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+  }
+  
+  .doctor-info {
+    margin: 10px 0;
+  }
+  
+  .doctor-info h6 {
+    display: inline; /* Display h6 inline */
+    margin-left: 5px; /* Add space between doctor's name and degree */
+  }
+  
+  
+  
+  
+  .background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Ensure the video is behind other content */
+  }
+  
+  .paper {
+    margin-top: 170px;
+    background-color: #35313178;
+    background-color: rgba(255, 255, 255, 0.456l); /* Adjust alpha value for transparency */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    align-items: center;
+    height: 650px;
+  }
+  .formbold-form-label{
+    color: white;
+  }
+  .booking{
+    font-size: 35px;
+    font-weight: bolder;
+    width: 300px;
+    margin-bottom: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: left;
+    height: fit-content;
+    color: #ffff;
+    
+  }
+  .formbold-form-input {
+    background-color: rgba(254, 254, 254, 0.3); /* Adjust alpha value for transparency */
+  }
+  .formbold-form-input::placeholder{
+    color: rgb(235, 234, 234);
+  }
+}
+  @media screen and (min-width: 781px) and (max-width: 1300px){
+  
+    html{
+      overflow-x: hidden;
+    }
+    body{
+      overflow-x: hidden;
+      width: 100%;
+  }
+    .hitech{
+  position: absolute;
+  width: 200px;
+  top: 20%;
+  transform: translate(-50%, -50%);
+  left: 23%;
+}
+.noble {
+  position: absolute;
+  top: 40%;
+  left: 23%;
+  transform: translate(-50%, -50%);
+  width: 180px;
+}
+
+.line {
+  position:absolute;
+  top: 13%; /* Adjust the top position based on the image top position */
+  left: 37%; /* Adjust the left position based on the image left position */
+  width: 3px; /* Adjust the width of the line */
+  height: 210px; /* Adjust the height of the line */
+  background-color: black; /* Set the color of the line */
+  transform: translateX(-50%); /* Center the line horizontally */
+  border-radius: 100px;
+}
+
+.doctors{
+  position: absolute;
+  top: 75%; /* Adjust the top position based on the line's top position */
+  left: 25%; /* Adjust the left position based on the line's left position */
+  background-color: rgba(255, 255, 255, 0.356); /* Adjust alpha value for transparency */
+  backdrop-filter: blur(2px);
+  border-radius: 20px;
+  width: 180px;
+}
+.doctors h2{
+  padding-left: 10px;
+  text-decoration: underline;
+  font-size: medium;
+}
+  }

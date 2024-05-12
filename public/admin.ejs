@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Appointments</h1>
+    <ul>
+        <% appointments.forEach(function(appointment) { %>
+            <li>Name: <%= appointment.name %></li>
+            <li>Email: <%= appointment.email %></li>
+            <li>Phone: <%= appointment.phoneNumber %></li>
+            <li>Date: <%= appointment.date %></li>
+            <hr>
+        <% }); %>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hi-tech Lab</title>
+    <link rel="icon" href="Picsart_24-03-02_17-26-46-983.png" type="image/icon">
+    <link rel="stylesheet" href="adminpage.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+</head>
+<body>
+  <header class="header">
+    <div class="logo-container">
+        <a href="lab.html"><img src="logo.jpg" alt="Logo" class="logo" width="100"></a>
+    </div>
+    <div class="servicesdetails">
+      <h7>LAB</h7><br>
+      <h7>X-RAY</h7><br>
+      <h7>ECG</h7><br>
+      <h7>OPG</h7><br>
+    </div>
+    
+</header>
+<div class="navdiv">
+  <nav class="nav">
+    <div class="menu-overlay">
+      <ul class="menu">
+        <li class="nav-item"><a href="lab.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="/admin" id="/admin" class="nav-link">Appoinment</a></li>
+        <li class="nav-item"><a href="/ladmin" class="nav-link" id="admin-link">offline-booking</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+      </ul>
+    </div>
+    <div class="menu-btn">
+      <i class="fas fa-bars"></i>
+    </div>
+  </nav>
+</div>
+
+
+  
+<main>
+  <section class="booking-container">
+    <!-- <video autoplay muted loop class="background-video">
+      <source src="MED5.mp4" type="video/mp4">
+      <-- Add additional sources for different video formats if needed -->
+  <!-- </video> -->
+  <div>
+    <img src="Picsart_24-03-02_17-26-46-983.png" alt="logo" class="hitech">
+    <img src="noble.png" alt="Logo" class="noble">
+    <div class="line"></div>
+    <div class="doctors">
+    <h2 class="heading">Consultant Pathologist</h2>
+    <ul class="list-doctors">
+      <li class="doctor-info">Dr. SALEEM <h6>MD,DCP</h6></li>
+      <li class="doctor-info">Dr. SUHAIL SALEEM <h6>MD,DipRCpath(UK),FAADV</h6></li>
+  </ul>
+  
+  </div>
+</div>
+
+  
+  <img src="background.jpg" alt="" class="background-video">
+  <div class="paper">
+    <div class="formbold-main-wrapper">
+        <div class="formbold-form-wrapper">
+            <div class="booking">Normal Booking :</div>  
+            <form action="/normal-booking" method="POST" id="bookingForm" enctype="multipart/form-data">
+                <div class="formbold-mb-5">
+                    <label for="name" class="formbold-form-label">Full Name</label>
+                    <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Full Name"
+                    class="formbold-form-input"
+                    required
+                    />
+                </div>
+                <div class="formbold-mb-5">
+                    <label for="phone" class="formbold-form-label">Phone Number</label>
+                    <input
+                    type="text"
+                    name="phoneNumber"
+                    id="phoneNumber"
+                    placeholder="Enter your phone number"
+                    class="formbold-form-input"
+                    required
+                    />
+                </div>
+                <div class="formbold-mb-5">
+                    <label for="amount" class="formbold-form-label">Amount</label>
+                    <input
+                    type="number"
+                    name="amount"
+                    id="amount"
+                    placeholder="Amount"
+                    class="formbold-form-input"
+                    />
+                </div>
+                <div class="flex flex-wrap formbold--mx-3">
+                  <div class="w-full sm:w-half formbold-px-3">
+                      <div class="formbold-mb-5 w-full">
+                          <label for="date" class="formbold-form-label">Date <h6>(select any date)</h6></label>
+                          <input
+                          type="date"
+                          name="date"
+                          id="date"
+                          class="formbold-form-input"
+                          />
+                      </div>
+                  </div>
+              </div>
+                <div class="formbold-mb-5">
+                    <label for="resultPdf" class="formbold-form-label">Upload Result PDF</label>
+                    <input type="file" name="resultPdf" id="resultPdf" accept=".pdf" required>
+                </div>
+                <div>
+                    <button type="submit" class="formbold-btn">Upload</button>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+
+</section>
+</main>
+
+
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="footerlogo">
+        <a href="lab.html"><img src="Picsart_24-03-02_17-26-46-983.png" alt="" class="img-fluid logo-footer"></a>
+        <div class="footer-about">
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,  </p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="useful-link">
+          <h2>Useful Links</h2>
+          <img src="" alt="" class="img-fluid">
+          <div class="use-links">
+            <li><a href="lab.html"><i class="fa-solid fa-angles-right"></i> Home</a></li>
+            <li><a href="about.html"><i class="fa-solid fa-angles-right"></i> About Us</a></li>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="social-links">
+          <h2>Follow Us</h2>
+          <!-- Replace src attribute with appropriate Font Awesome classes -->
+          <img src="" alt="">
+          <div class="social-icons">
+            <!-- Font Awesome icon classes for Facebook and Instagram -->
+            <li><a href=""><i class="fab fa-facebook-f"></i> Facebook</a></li><br>
+            <li><a href=""><i class="fab fa-instagram"></i> Instagram</a></li>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="address">
+          <h2>Address</h2>
+          <img src="" alt="" class="img-fluid">
+          <div class="address-links">
+            <li class="address1"><i class="fa-solid fa-location-dot"></i> payyannur-
+              Kannur Dt 
+               Kerala 670308</li>
+            <li><a href=""><i class="fa-solid fa-phone"></i> +91 90904500112</a></li>
+            <li><a href=""><i class="fa-solid fa-envelope"></i> mail@gmail.com</a></li>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+<!-- footer section end -->
+<!-- footer copy right section start -->
+<section id="copy-right">
+  <div class="copy-right-sec"> 
+    <p><i class="far fa-copyright"></i>    An <a href="https://orinoco.netlify.app/">Orinoco</a> product</p>
+
+</section>
+
+<script src="script2.js"></script>
+</body>
+</html>

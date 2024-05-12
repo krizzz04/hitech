@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f1f1f1;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        input[type="text"] {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Check Your Result</h1>
+    <form action="/get-result" method="GET">
+        <label for="patientId">Enter Your Patient ID:</label>
+        <input type="text" id="patientId" name="patientId" oninput="validateInput()" pattern="[A-Za-z]*\d{0,8}[A-Za-z]*" placeholder="fullnamedate(ddmm)phone(last 4 digit)" onkeypress="return event.charCode !== 32" required>
+        <button type="submit">Get Result</button>
+    </form>
+    <script>
+        function validateInput() {
+            var input = document.getElementById('patientId').value;
+            var regex = /^[A-Za-z]*\d{0,8}[A-Za-z]*$/;
+            if (!regex.test(input)) {
+                document.getElementById('patientId').setCustomValidity('Invalid input. fullnamedate(ddmm)phone(last 4 digit).');
+            } else {
+                document.getElementById('patientId').setCustomValidity('');
+            }
+        }
+    </script>
+    <% if (appointment && appointment.amount > 0) { %>
+        <p>Please make a payment to download your result:</p>
+        <a href="/generate-payment-link?patientId=<%= appointment.patientId %>&amount=<%= appointment.amount %>">Make Payment</a>
+    <% } %>
+</body>
+</html>
